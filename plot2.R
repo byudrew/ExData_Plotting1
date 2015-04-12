@@ -22,3 +22,19 @@ data <- data[complete.cases(data),]
 
 
 ## Plot 2
+
+windows()
+
+# Create the plot and labels, but no lines
+with(data, plot(Date, Global_active_power, 
+                xlab="",
+                ylab="Global Active Power (kilowatts)",
+                type="n"))
+
+# Add lines to plot
+with(data, lines(Date, Global_active_power),
+     col="black")
+
+# Save to png file
+dev.copy(png, file="plot2.png")
+dev.off()
