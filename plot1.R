@@ -22,3 +22,16 @@ data <- data[complete.cases(data),]
 
 
 ## Plot 1
+
+windows()
+
+# Plot histogram of global active power
+hist(data$Global_active_power,
+     col="red",
+     main="Global Active Power",
+     ylab="Frequency",
+     xlab="Global Active Power (kilowatts)")
+
+# Save to png file
+dev.copy(png, file="plot1.png")
+dev.off()
