@@ -22,3 +22,29 @@ data <- data[complete.cases(data),]
 
 
 ## Plot 3
+
+# Save to png file (uses default transparent background, as in example files)
+png(filename = "plot3.png", width=480, height=480)
+
+# Create the plot and labels, no lines
+with(data, plot(Date, Sub_metering_1, 
+                xlab="",
+                ylab="Energy sub metering",
+                type="n"))
+
+# Add lines for the three different measurements
+with(data, lines(Date, Sub_metering_1,
+                 col="black"))
+with(data, lines(Date, Sub_metering_2,
+                 col="red"))
+with(data, lines(Date, Sub_metering_3,
+                 col="blue"))
+
+# Add a legend to describe the lines
+legend("topright",
+       lty=1,
+       col=c("black","red","blue"),
+       legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"))
+
+# End plotting
+dev.off()
