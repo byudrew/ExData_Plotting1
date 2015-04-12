@@ -23,7 +23,8 @@ data <- data[complete.cases(data),]
 
 ## Plot 1
 
-windows()
+# Save to png file (uses default transparent background, as in example files)
+png(filename = "plot1.png", width=480, height=480)
 
 # Plot histogram of global active power
 hist(data$Global_active_power,
@@ -32,6 +33,5 @@ hist(data$Global_active_power,
      ylab="Frequency",
      xlab="Global Active Power (kilowatts)")
 
-# Save to png file (uses default transparent background, as in example files)
-dev.copy(png, file="plot1.png")
+# End plotting
 dev.off()

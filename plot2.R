@@ -23,7 +23,8 @@ data <- data[complete.cases(data),]
 
 ## Plot 2
 
-windows()
+# Save to png file (uses default transparent background, as in example files)
+png(filename = "plot2.png", width=480, height=480)
 
 # Create the plot and labels, but no lines
 with(data, plot(Date, Global_active_power, 
@@ -35,6 +36,5 @@ with(data, plot(Date, Global_active_power,
 with(data, lines(Date, Global_active_power),
      col="black")
 
-# Save to png file (uses default transparent background, as in example files)
-dev.copy(png, file="plot2.png")
+# End plotting
 dev.off()
