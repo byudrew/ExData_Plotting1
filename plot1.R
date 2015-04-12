@@ -23,7 +23,7 @@ data <- data[complete.cases(data),]
 
 ## Plot 1
 
-# Save to png file (uses default transparent background, as in example files)
+# Save to png file
 png(filename = "plot1.png", width=480, height=480)
 
 # Plot histogram of global active power

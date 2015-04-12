@@ -23,7 +23,7 @@ data <- data[complete.cases(data),]
 
 ## Plot 2
 
-# Save to png file (uses default transparent background, as in example files)
+# Save to png file
 png(filename = "plot2.png", width=480, height=480)
 
 # Create the plot and labels, but no lines
