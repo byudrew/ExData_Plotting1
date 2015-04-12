@@ -32,6 +32,6 @@ hist(data$Global_active_power,
      ylab="Frequency",
      xlab="Global Active Power (kilowatts)")
 
-# Save to png file
+# Save to png file (uses default transparent background, as in example files)
 dev.copy(png, file="plot1.png")
 dev.off()

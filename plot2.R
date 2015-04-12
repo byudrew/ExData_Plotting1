@@ -35,6 +35,6 @@ with(data, plot(Date, Global_active_power,
 with(data, lines(Date, Global_active_power),
      col="black")
 
-# Save to png file
+# Save to png file (uses default transparent background, as in example files)
 dev.copy(png, file="plot2.png")
 dev.off()
